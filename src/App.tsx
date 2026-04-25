@@ -14,7 +14,7 @@ const img = (id: string) => `https://drive.google.com/uc?export=view&id=${id}`;
 const pillars: Pillar[] = [
   {
     name: "Digital Life",
-    image: img("1o_CsG6pG0ks3qI-6tQ1oOirHDg4RUVKT"),
+    image: img("https://pub-edbffba3e85240eabfa80aa13a1b8169.r2.dev/Site/Digital.jpg"),
     details: {
       why: "Access is fragmented across accounts — without structure, nothing can be reached when it matters.",
       protect: ["Primary email", "Password manager", "2FA recovery", "Cloud storage"],
