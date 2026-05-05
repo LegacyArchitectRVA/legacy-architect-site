@@ -1,0 +1,141 @@
+media:
+  - name: images
+    label: Site Images
+    input: images
+    output: /images
+    extensions: [jpg, jpeg, png, webp, svg]
+    rename: safe
+
+content:
+  - name: site_content
+    label: Structured Site Content
+    type: file
+    path: content.yml
+    format: yaml
+    fields:
+      - name: brand
+        label: Brand
+        type: object
+        fields:
+          - { name: name, label: Business Name, type: string }
+          - { name: tagline, label: Tagline, type: string }
+          - { name: subtitle, label: Subtitle, type: text }
+          - { name: logo, label: Logo, type: image, options: { media: images } }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: city, label: City, type: string }
+          - { name: state, label: State, type: string }
+          - { name: founder, label: Founder, type: string }
+
+      - name: seo
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: SEO Title, type: string }
+          - { name: description, label: Meta Description, type: text }
+          - { name: url, label: Website URL, type: string }
+          - { name: keywords, label: Keywords, type: string, list: true }
+
+      - name: home
+        label: Homepage
+        type: object
+        fields:
+          - { name: hero_heading, label: Hero Heading, type: string }
+          - { name: hero_subheading, label: Hero Subheading, type: text }
+          - { name: hero_cta, label: Hero Button Text, type: string }
+          - { name: hero_cta_url, label: Hero Button Link, type: string }
+          - { name: intro_heading, label: Intro Heading, type: string }
+          - { name: intro_text, label: Intro Text, type: text }
+          - { name: pillars_heading, label: Pillars Heading, type: string }
+          - { name: pillars_subheading, label: Pillars Subheading, type: text }
+          - name: pillars
+            label: Pillars
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - { name: name, label: Pillar Name, type: string }
+              - { name: description, label: Description, type: text }
+
+      - name: pricing
+        label: Services and Pricing
+        type: object
+        fields:
+          - { name: heading, label: Pricing Heading, type: string }
+          - name: founding_families
+            label: Founding Families
+            type: object
+            fields:
+              - { name: enabled, label: Show This Section, type: boolean }
+              - { name: seats_remaining, label: Seats Remaining, type: number }
+              - { name: benefits, label: Benefits Text, type: text }
+              - { name: logo, label: Section Image or Crest, type: image, options: { media: images } }
+          - name: tiers
+            label: Service Tiers
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - { name: name, label: Tier Name, type: string }
+              - { name: price, label: Price, type: string }
+              - { name: tagline, label: Tagline, type: text }
+              - { name: icon, label: Icon or Image, type: image, options: { media: images } }
+              - { name: annual_review, label: Annual Review Price, type: string }
+              - { name: featured, label: Featured Tier, type: boolean }
+              - { name: features, label: Features, type: string, list: true }
+          - { name: payment_options, label: Payment Options, type: string, list: true }
+          - { name: upgrade_note, label: Upgrade Note, type: text }
+
+      - name: faq
+        label: FAQ
+        type: object
+        fields:
+          - name: sections
+            label: FAQ Sections
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - { name: label, label: Section Label, type: string }
+              - name: items
+                label: Questions
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{q}"
+                fields:
+                  - { name: q, label: Question, type: string }
+                  - { name: a, label: Answer, type: text }
+                  - { name: badge, label: Badge, type: string, required: false }
+
+      - name: contact
+        label: Contact and Scheduling
+        type: object
+        fields:
+          - { name: heading, label: Contact Heading, type: string }
+          - { name: subheading, label: Contact Subheading, type: text }
+          - { name: cal_namespace, label: Cal.com Namespace, type: string }
+
+  - name: live_homepage_html
+    label: Live Homepage HTML
+    type: file
+    path: index.html
+    format: code
+
+  - name: source_homepage_html
+    label: Source Homepage HTML
+    type: file
+    path: src/index.html
+    format: code
+
+settings:
+  commit:
+    branch: main
+    message: "Update website content from Pages CMS"
