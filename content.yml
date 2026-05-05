@@ -1,0 +1,94 @@
+brand:
+  name: "Legacy Architect RVA"
+  tagline: "Order in Your Absence"
+  subtitle: "I help people get their lives organized so someone else can run it if they can’t."
+  logo: "/images/logo.png"
+  email: "craig@legacyarchitectrva.com"
+  phone: ""
+  city: "Richmond"
+  state: "VA"
+  founder: "Craig Rothchild"
+
+seo:
+  title: "Legacy Architect RVA | Order in Your Absence"
+  description: "Legacy Architect RVA helps create Life Manuals that organize accounts, documents, contacts, routines, and instructions so someone else can run your life if needed."
+  url: "https://legacyarchitectrva.com"
+  keywords:
+    - life manual
+    - life organization
+    - continuity planning
+    - Richmond VA
+
+home:
+  hero_heading: "Order in Your Absence"
+  hero_subheading: "I help people get their lives organized so someone else can run it if they can’t."
+  hero_cta: "Start with the workbook"
+  hero_cta_url: "https://workbook.legacyarchitectrva.com"
+  intro_heading: "Most lives are organized by memory."
+  intro_text: "Accounts, documents, contacts, routines, and instructions often live across folders, inboxes, devices, and habits. A Life Manual helps organize the operational details so transition is cleaner."
+  pillars_heading: "The Life Manual organizes the operational how."
+  pillars_subheading: "It does not replace estate documents. It helps someone know what exists, where records live, and what needs attention."
+  pillars:
+    - name: "Accounts"
+      description: "Where important accounts exist and how they are managed."
+    - name: "Documents"
+      description: "Where key records live and how someone can locate them."
+    - name: "Contacts"
+      description: "Who needs to be reached and for what purpose."
+
+pricing:
+  heading: "Ways to begin"
+  founding_families:
+    enabled: false
+    seats_remaining: 0
+    benefits: ""
+    logo: ""
+  tiers:
+    - name: "Workbook"
+      price: "$37"
+      tagline: "A self-guided starting point."
+      icon: ""
+      annual_review: ""
+      featured: false
+      features:
+        - "7-pillar structure"
+        - "Practical prompts"
+        - "Immediate download"
+    - name: "Blueprint Session"
+      price: "$395"
+      tagline: "A focused working session to organize the path forward."
+      icon: ""
+      annual_review: ""
+      featured: true
+      features:
+        - "Structured review"
+        - "Priority areas identified"
+        - "Clear next steps"
+    - name: "Vault"
+      price: "$950"
+      tagline: "A facilitated Life Manual foundation."
+      icon: ""
+      annual_review: "$400"
+      featured: false
+      features:
+        - "Core Life Manual structure"
+        - "Client-controlled Secure Drive"
+        - "No credential storage"
+  payment_options:
+    - "Payment options available by service level."
+  upgrade_note: "Services can be expanded as needed."
+
+faq:
+  sections:
+    - label: "General"
+      items:
+        - q: "Is this a will or trust?"
+          a: "No. A Life Manual is the operational how. Wills and trusts address the legal what and who."
+          badge: ""
+        - q: "Do you store passwords?"
+          a: "No. Credentials are not stored. The client controls their Secure Drive."
+          badge: ""
+contact:
+  heading: "Start with a cleaner system."
+  subheading: "Begin with the workbook or schedule a Blueprint Session."
+  cal_namespace: ""
